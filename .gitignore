@@ -6,3 +6,5 @@ pretrain/data/
 datasets/OTB_link
 datasets/VOT
 datasets/ILSVRC
+.jpg
+.txt

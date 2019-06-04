@@ -103,7 +103,7 @@ class MDNet(nn.Module):
             if p.requires_grad:
                 params[k] = p
         return params
-    
+
     def get_all_params(self):
         params = OrderedDict()
         for k, p in self.params.items():

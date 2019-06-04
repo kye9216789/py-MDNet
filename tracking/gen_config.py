@@ -8,7 +8,7 @@ def gen_config(args):
     if args.seq != '':
         # generate config from a sequence name
 
-        seq_home = 'datasets/OTB'
+        seq_home = f'datasets/{args.dataset}'
         result_home = 'results'
 
         seq_name = args.seq
@@ -18,7 +18,7 @@ def gen_config(args):
         img_list = os.listdir(img_dir)
         img_list.sort()
         img_list = [os.path.join(img_dir, x) for x in img_list]
-        
+
         with open(gt_path) as f:
             gt = np.loadtxt((x.replace('\t',',') for x in f), delimiter=',')
         init_bbox = gt[0]
